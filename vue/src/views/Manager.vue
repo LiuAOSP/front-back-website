@@ -34,25 +34,7 @@
         </el-dropdown>
       </div>
     </div>
-    
-    <!-- 主体内容区域 -->
-    <div class="main-container">
-      <!-- 左侧导航菜单 -->
-      <div class="sidebar">
-        <el-menu
-          router
-          :default-active="router.currentRoute.value.path"
-          :default-openeds="['1']"
-          class="sidebar-menu"
-        >
-          <el-menu-item index="/manager/home" class="menu-item">
-            <el-icon><house /></el-icon>
-            <span>首页</span>
-          </el-menu-item>
-          
-          <el-menu-item index="/manager/data" class="menu-item">
-            <el-icon><data-analysis /></el-icon>
-            <span>数据统计</span>
+
           </el-menu-item>
           
           <el-menu-item index="/manager/article" v-if="data.user.role === 'ADM'" class="menu-item">
@@ -106,16 +88,7 @@
 <script setup>
 import { reactive } from "vue";
 import router from "@/router/index.js";
-import { 
-  House, 
-  DataAnalysis, 
-  Document, 
-  OfficeBuilding, 
-  User, 
-  UserFilled, 
-  Lock, 
-  SwitchButton,
-  ArrowDown
+
 } from '@element-plus/icons-vue';
 
 const data = reactive({
